@@ -1,10 +1,13 @@
 [x] Create wireframe.
 [x] Create database model.
 [x] Added database to project.
-[] Git Commit.
+[x] Git Commit.
 
 [] Create mockup.
 [] Add functionality.
+[x] Add ability to add entries to the database.
+[x] Added table to display entries on the homepage.
+[] Add ability to delete entries(based on ip).
 
 
 link
