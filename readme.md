@@ -7,7 +7,8 @@
 [] Add functionality.
 [x] Add ability to add entries to the database.
 [x] Added table to display entries on the homepage.
-[] Add ability to delete entries(based on ip).
+[x] Add ability to delete entries(based on ip).
+[] Add many to many categories table
 
 
 link

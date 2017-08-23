@@ -14,7 +14,10 @@ require('new-connection.php');
 //sanitize each $_POST entry
 foreach($_POST as $key => $value)
 {
-	$value = escape_this_string($value);e
+	if($key != 'category')
+	{
+		$value = escape_this_string($value);
+	}
 }
 
 //Check for proper form submission.
@@ -42,7 +45,22 @@ if(isset($_POST['action']) && $_POST['action'] == 'add_entry')
 		$query = "INSERT INTO links (description, url, created_at, updated_at, notes) 
 VALUES ('{$_POST['description']}', '{$_POST['url']}', NOW(), NOW(), '{$_POST['notes']}')
 ";
-		$query_id = run_mysql_query($query);
+		$links_id = run_mysql_query($query);
+
+		//check if catogies exist for new categories
+
+		//add existin categories
+		for($i = 1; $i < count($_POST['category']); $i++)
+		{
+			//look for ids of existing categories
+			$query = "SELECT id FROM categories WHERE catogory = {$_POST['category'][$i]}";
+			
+		}
+
+		exit();
+		//add categories
+		$query = "INSERT INTO links_has_categories (links_id, categories_id) VALUES ({$links_id}, {$categories_id})";
+
 
 		$query = "SELECT * FROM links";
 

@@ -1,10 +1,18 @@
 <?php
 session_start();
+require('new-connection.php');
+$query = "SELECT * FROM categories";
+$categories = fetch_all($query);
 
 ?>
 <html>
 <head>
 	<title>Welcome to Shortcuts! Leave a link! Take a link!</title>
+	<style>
+		.category {
+			text-transform: capitalize;
+		}
+	</style>
 </head>
 <body>
 	<h1>Welcome to Shortcuts!</h1>
@@ -18,9 +26,20 @@ session_start();
 			<input type='text' name='url' id='url' placeholder='Please enter your link!'>
 		</section>
 		<section>
-			<label for='category'>Categories {checkbox}</label>
-			<input type='text' name='category' id='category' placeholder="What's this related to?">
+			<label for='category'>Categories</label>
+			<input type='text' name='category[]' id='category' placeholder="New Categories, separated by commas.">
+
+			
+			<?php
+				foreach($categories as $category)
+				{
+					echo "<input class='category' type='checkbox' name='category_id' value='" . $category['id'] . 
+					"'>".$category['category']."";
+
+				}
+			?>
 		</section>
+
 		<section>
 			<label for='notes'>Notes</label>
 			<input type='text' name='notes' id='notes' placeholder='Something about this...'>
