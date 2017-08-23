@@ -1,0 +1,29 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1117" measuredH="677" mockupW="885" mockupH="640">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="232" y="37" w="885" h="640" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::DataGrid" x="247" y="185" w="-1" h="-1" measuredW="688" measuredH="97" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Description%5Cr%28job%20title%29%20%5E%2C%20Link%20%5Ev%2C%20Added%2C%20Category%20v%2C%20Notes%2C%20Actions%2C%0ACrypto%2C%20http%3A//www.coinmarketcap.com%2C%208/23/17%2C%20Finance%2C%20Tells%20me%20all%20the%20caps%2C%20Delete%0AHosting%2C%20http%3A//www.asmallorange.com%2C%208/23/17%2C%20Web%20Development%2C%20Let%27s%20me%20make%20stuff%20live%21%2C%20Edit</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Accordion" x="942" y="185" w="-1" h="-1" measuredW="150" measuredH="159" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Categories%0AFinance%0AWeb%20Development</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="340" y="159" w="-1" h="-1" measuredW="79" measuredH="26" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="591" y="159" w="-1" h="-1" measuredW="79" measuredH="26" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="713" y="159" w="-1" h="-1" measuredW="79" measuredH="26" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="247" y="159" w="-1" h="-1" measuredW="79" measuredH="26" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="866" y="159" w="55" h="27" measuredW="45" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="247" y="123" w="-1" h="-1" measuredW="107" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welcome%20to%20Links%21</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
