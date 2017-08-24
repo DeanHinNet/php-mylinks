@@ -3,18 +3,18 @@ session_start();
 
 require('new-connection.php');
 
-$query ="DELETE FROM links WHERE id = {$_GET['id']}";
+if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
+	$query ="DELETE FROM links WHERE id = {$_GET['id']}";
 
-run_mysql_query($query);
+	run_mysql_query($query);
 
-$query = "SELECT * FROM links";
+	$query = "SELECT * FROM links";
 
-$all_entries = fetch_all($query);
-$_SESSION['entries'] = $all_entries;
+	$all_entries = fetch_all($query);
+	$_SESSION['entries'] = $all_entries;
+
+}
+
 header('location: index.php');
 exit();
-		
-header('location: index.php');
-exit();
-
 ?>

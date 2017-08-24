@@ -14,9 +14,16 @@ require('new-connection.php');
 //sanitize each $_POST entry
 foreach($_POST as $key => $value)
 {
-	if($key != 'category')
+	if(!is_array($value))
 	{
 		$value = escape_this_string($value);
+	}
+	else
+	{
+		foreach($value as $array_key => $array_value)
+		{
+			$array_value = escape_this_string($array_value);
+		}
 	}
 }
 
@@ -50,22 +57,21 @@ VALUES ('{$_POST['description']}', '{$_POST['url']}', NOW(), NOW(), '{$_POST['no
 		//check if catogies exist for new categories
 
 		//add existin categories
-		for($i = 1; $i < count($_POST['category']); $i++)
+		for($i = 0; $i < count($_POST['category']); $i++)
 		{
 			//look for ids of existing categories
 			$query = "SELECT id FROM categories WHERE catogory = {$_POST['category'][$i]}";
 			
 		}
-
 		exit();
-		//add categories
-		$query = "INSERT INTO links_has_categories (links_id, categories_id) VALUES ({$links_id}, {$categories_id})";
+		//add categorries
+		
 
 
-		$query = "SELECT * FROM links";
+	// $query = "SELECT * FROM links";
 
-		$all_entries = fetch_all($query);
-		$_SESSION['entries'] = $all_entries;
+	// $all_entries = fetch_all($query);
+	// $_SESSION['entries'] = $all_entries;
 		header('location: index.php');
 		exit();
 	}
